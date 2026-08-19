@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Wanderly | Explore The World</title>
+    <title>Wanderly | Travel & Tourism</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +17,11 @@
 <body>
 
 <!-- NAVBAR -->
+<header class="navbar" id="navbar">
 
-<header class="navbar">
-
-    <div class="logo">
-        <span>✈</span> Wanderly
-    </div>
+    <a href="#home" class="logo">
+        ✈ Wanderly
+    </a>
 
     <nav id="navMenu">
         <a href="#home">Home</a>
@@ -32,27 +31,32 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <button class="menu-btn" id="menuBtn">
+        ☰
+    </button>
 
 </header>
 
 
 <!-- HERO -->
-
 <section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
 
     <div class="hero-content">
 
-        <p class="small-title">DISCOVER • EXPLORE • EXPERIENCE</p>
+        <p class="eyebrow">
+            DISCOVER • EXPLORE • EXPERIENCE
+        </p>
 
         <h1>
-            Explore the world,
+            Explore the world,<br>
             <span>create memories.</span>
         </h1>
 
         <p class="hero-text">
-            Discover beautiful destinations, unique experiences
-            and unforgettable journeys with Wanderly.
+            Discover beautiful destinations, curated experiences
+            and unforgettable journeys. Your next adventure starts here.
         </p>
 
         <div class="hero-buttons">
@@ -69,29 +73,45 @@
 
     </div>
 
+    <div class="hero-scroll">
+        SCROLL TO EXPLORE ↓
+    </div>
+
 </section>
 
 
 <!-- SEARCH -->
-
 <section class="search-section">
 
     <div class="search-box">
 
         <div class="search-item">
-            <span>📍</span>
+
+            <span class="search-icon">
+                ⌕
+            </span>
+
             <div>
-                <small>Destination</small>
+
+                <label>
+                    Destination
+                </label>
+
                 <input
-                    type="text"
                     id="searchInput"
+                    type="search"
                     placeholder="Where do you want to go?"
                 >
+
             </div>
+
         </div>
 
-        <button onclick="searchDestination()" class="search-btn">
-            Search
+        <button
+            id="searchBtn"
+            class="search-btn"
+        >
+            Search →
         </button>
 
     </div>
@@ -100,197 +120,55 @@
 
 
 <!-- DESTINATIONS -->
-
 <section class="section" id="destinations">
 
     <div class="section-heading">
 
         <div>
-            <p class="small-title">TOP DESTINATIONS</p>
+
+            <p class="eyebrow">
+                TOP DESTINATIONS
+            </p>
 
             <h2>
-                Places worth
+                Places worth<br>
                 <span>visiting</span>
             </h2>
+
         </div>
 
         <p>
-            Discover some of the most beautiful destinations
-            and plan your next adventure.
+            Explore India's most beautiful destinations and
+            find the perfect place for your next escape.
         </p>
 
     </div>
 
 
-    <div class="destination-grid">
-
-        <article class="destination-card" data-name="Goa">
-
-            <img
-                src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80"
-                alt="Goa"
-            >
-
-            <div class="card-content">
-
-                <span>India</span>
-
-                <h3>Goa</h3>
-
-                <p>Beaches • Nightlife • Adventure</p>
-
-                <div class="card-bottom">
-                    <strong>From ₹8,999</strong>
-                    <button onclick="showDestination('Goa')">View →</button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <article class="destination-card" data-name="Manali">
-
-            <img
-                src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80"
-                alt="Manali"
-            >
-
-            <div class="card-content">
-
-                <span>India</span>
-
-                <h3>Manali</h3>
-
-                <p>Mountains • Snow • Adventure</p>
-
-                <div class="card-bottom">
-                    <strong>From ₹10,999</strong>
-                    <button onclick="showDestination('Manali')">View →</button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <article class="destination-card" data-name="Kerala">
-
-            <img
-                src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80"
-                alt="Kerala"
-            >
-
-            <div class="card-content">
-
-                <span>India</span>
-
-                <h3>Kerala</h3>
-
-                <p>Backwaters • Nature • Culture</p>
-
-                <div class="card-bottom">
-                    <strong>From ₹12,999</strong>
-                    <button onclick="showDestination('Kerala')">View →</button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <article class="destination-card" data-name="Jaipur">
-
-            <img
-                src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=900&q=80"
-                alt="Jaipur"
-            >
-
-            <div class="card-content">
-
-                <span>India</span>
-
-                <h3>Jaipur</h3>
-
-                <p>History • Forts • Royal Culture</p>
-
-                <div class="card-bottom">
-                    <strong>From ₹7,999</strong>
-                    <button onclick="showDestination('Jaipur')">View →</button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <article class="destination-card" data-name="Kashmir">
-
-            <img
-                src="https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=900&q=80"
-                alt="Kashmir"
-            >
-
-            <div class="card-content">
-
-                <span>India</span>
-
-                <h3>Kashmir</h3>
-
-                <p>Lakes • Mountains • Nature</p>
-
-                <div class="card-bottom">
-                    <strong>From ₹15,999</strong>
-                    <button onclick="showDestination('Kashmir')">View →</button>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <article class="destination-card" data-name="Mumbai">
-
-            <img
-                src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&w=900&q=80"
-                alt="Mumbai"
-            >
-
-            <div class="card-content">
-
-                <span>India</span>
-
-                <h3>Mumbai</h3>
-
-                <p>City • Food • Entertainment</p>
-
-                <div class="card-bottom">
-                    <strong>From ₹6,999</strong>
-                    <button onclick="showDestination('Mumbai')">View →</button>
-                </div>
-
-            </div>
-
-        </article>
-
-    </div>
+    <div
+        class="destination-grid"
+        id="destinationGrid"
+    ></div>
 
 </section>
 
 
-<!-- WHY US -->
-
+<!-- WHY WANDERLY -->
 <section class="why-section">
 
     <div class="section-heading">
 
         <div>
-            <p class="small-title">WHY WANDERLY</p>
+
+            <p class="eyebrow">
+                WHY WANDERLY
+            </p>
 
             <h2>
-                Travel made
+                Travel made<br>
                 <span>simple</span>
             </h2>
+
         </div>
 
     </div>
@@ -298,60 +176,76 @@
 
     <div class="features">
 
-        <div class="feature">
+        <article class="feature">
 
-            <div class="feature-icon">🌎</div>
+            <div class="feature-icon">
+                🌎
+            </div>
 
-            <h3>Best Destinations</h3>
-
-            <p>
-                Explore carefully selected destinations
-                for unforgettable experiences.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="feature-icon">💰</div>
-
-            <h3>Affordable Packages</h3>
+            <h3>
+                Best Destinations
+            </h3>
 
             <p>
-                Enjoy amazing trips with transparent
-                and affordable pricing.
+                Carefully selected places for memorable
+                travel experiences.
             </p>
 
-        </div>
+        </article>
 
 
-        <div class="feature">
+        <article class="feature">
 
-            <div class="feature-icon">🛡️</div>
+            <div class="feature-icon">
+                ₹
+            </div>
 
-            <h3>Safe & Reliable</h3>
+            <h3>
+                Affordable Packages
+            </h3>
 
             <p>
-                We focus on creating comfortable
-                and reliable travel experiences.
+                Clear pricing and flexible packages
+                for different budgets.
             </p>
 
-        </div>
+        </article>
 
 
-        <div class="feature">
+        <article class="feature">
 
-            <div class="feature-icon">🎧</div>
+            <div class="feature-icon">
+                ✓
+            </div>
 
-            <h3>24/7 Support</h3>
+            <h3>
+                Safe & Reliable
+            </h3>
 
             <p>
-                Get assistance whenever you need
-                help during your journey.
+                Simple planning designed around a
+                comfortable travel experience.
             </p>
 
-        </div>
+        </article>
+
+
+        <article class="feature">
+
+            <div class="feature-icon">
+                24
+            </div>
+
+            <h3>
+                24/7 Support
+            </h3>
+
+            <p>
+                Get help whenever you need it while
+                planning your journey.
+            </p>
+
+        </article>
 
     </div>
 
@@ -359,17 +253,18 @@
 
 
 <!-- PACKAGES -->
-
 <section class="section" id="packages">
 
     <div class="section-heading">
 
         <div>
 
-            <p class="small-title">POPULAR PACKAGES</p>
+            <p class="eyebrow">
+                POPULAR PACKAGES
+            </p>
 
             <h2>
-                Choose your
+                Choose your<br>
                 <span>journey</span>
             </h2>
 
@@ -378,121 +273,27 @@
     </div>
 
 
-    <div class="package-grid">
-
-        <div class="package-card">
-
-            <div class="package-image">
-                <img
-                    src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80"
-                    alt="Goa package"
-                >
-
-                <span class="badge">Popular</span>
-            </div>
-
-            <div class="package-content">
-
-                <h3>Goa Beach Escape</h3>
-
-                <p>4 Days / 3 Nights</p>
-
-                <div class="package-info">
-                    <span>⭐ 4.8</span>
-                    <strong>₹12,999</strong>
-                </div>
-
-                <button onclick="bookPackage('Goa Beach Escape')">
-                    Book Now
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <div class="package-card">
-
-            <div class="package-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80"
-                    alt="Manali package"
-                >
-
-                <span class="badge">Trending</span>
-
-            </div>
-
-            <div class="package-content">
-
-                <h3>Manali Adventure</h3>
-
-                <p>5 Days / 4 Nights</p>
-
-                <div class="package-info">
-                    <span>⭐ 4.9</span>
-                    <strong>₹16,999</strong>
-                </div>
-
-                <button onclick="bookPackage('Manali Adventure')">
-                    Book Now
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <div class="package-card">
-
-            <div class="package-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80"
-                    alt="Kerala package"
-                >
-
-                <span class="badge">Best Value</span>
-
-            </div>
-
-            <div class="package-content">
-
-                <h3>Kerala Escape</h3>
-
-                <p>6 Days / 5 Nights</p>
-
-                <div class="package-info">
-                    <span>⭐ 4.7</span>
-                    <strong>₹19,999</strong>
-                </div>
-
-                <button onclick="bookPackage('Kerala Escape')">
-                    Book Now
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
+    <div
+        class="package-grid"
+        id="packageGrid"
+    ></div>
 
 </section>
 
 
 <!-- GALLERY -->
-
 <section class="gallery-section" id="gallery">
 
     <div class="section-heading">
 
         <div>
 
-            <p class="small-title">TRAVEL MOMENTS</p>
+            <p class="eyebrow">
+                TRAVEL MOMENTS
+            </p>
 
             <h2>
-                Explore our
+                Explore our<br>
                 <span>gallery</span>
             </h2>
 
@@ -504,23 +305,28 @@
     <div class="gallery">
 
         <img
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
-            alt="Travel"
+            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85"
+            alt="Mountain landscape"
         >
 
         <img
-            src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1000&q=80"
-            alt="Mountain"
+            src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=85"
+            alt="Mountain lake"
         >
 
         <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
-            alt="Beach"
+            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+            alt="Tropical beach"
         >
 
         <img
-            src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1000&q=80"
-            alt="Travel destination"
+            src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=85"
+            alt="Travel road"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=85"
+            alt="India landmark"
         >
 
     </div>
@@ -529,53 +335,65 @@
 
 
 <!-- CONTACT -->
-
-<section class="contact-section" id="contact">
+<section
+    class="contact-section"
+    id="contact"
+>
 
     <div class="contact-container">
 
         <div class="contact-info">
 
-            <p class="small-title">GET IN TOUCH</p>
+            <p class="eyebrow">
+                GET IN TOUCH
+            </p>
 
             <h2>
-                Let's plan your
+                Let's plan your<br>
                 <span>next adventure.</span>
             </h2>
 
             <p>
-                Have a destination in mind? Send us your
-                requirements and our team will help you
-                plan your perfect trip.
+                Tell us where you want to go and what kind
+                of experience you want. We'll help you start planning.
             </p>
 
             <div class="contact-details">
 
-                <p>📍 Pune, Maharashtra, India</p>
+                <p>
+                    📍 Pune, Maharashtra, India
+                </p>
 
-                <p>📧 hello@wanderly.com</p>
+                <p>
+                    ✉ hello@wanderly.com
+                </p>
 
-                <p>📞 +91 98765 43210</p>
+                <p>
+                    ☎ +91 98765 43210
+                </p>
 
             </div>
 
         </div>
 
 
-        <form id="contactForm" class="contact-form">
+        <form
+            id="contactForm"
+            class="contact-form"
+        >
 
             <div class="form-row">
 
                 <input
-                    type="text"
                     id="name"
+                    type="text"
                     placeholder="Your Name"
                     required
                 >
 
                 <input
-                    type="email"
                     id="email"
+                    type="email"
                     placeholder="Email Address"
                     required
                 >
@@ -583,7 +401,10 @@
             </div>
 
 
-            <select id="destination" required>
+            <select
+                id="destination"
+                required
+            >
 
                 <option value="">
                     Select Destination
@@ -607,11 +428,18 @@
             ></textarea>
 
 
-            <button type="submit" class="primary-btn">
+            <button
+                type="submit"
+                class="primary-btn full-btn"
+            >
                 Send Enquiry →
             </button>
 
-            <p id="formMessage"></p>
+
+            <p
+                id="formMessage"
+                class="form-message"
+            ></p>
 
         </form>
 
@@ -621,37 +449,61 @@
 
 
 <!-- FOOTER -->
-
 <footer>
 
-    <div class="footer-logo">
-        ✈ Wanderly
+    <div class="footer-inner">
+
+        <div>
+
+            <a
+                href="#home"
+                class="footer-logo"
+            >
+                ✈ Wanderly
+            </a>
+
+            <p>
+                Explore more. Travel better. Create memories.
+            </p>
+
+        </div>
+
+        <p>
+            © 2026 Wanderly Travel. All rights reserved.
+        </p>
+
     </div>
-
-    <p>
-        Explore more. Travel better. Create memories.
-    </p>
-
-    <p class="copyright">
-        © 2026 Wanderly Travel. All rights reserved.
-    </p>
 
 </footer>
 
 
 <!-- MODAL -->
-
-<div id="modal" class="modal">
+<div
+    class="modal"
+    id="modal"
+>
 
     <div class="modal-content">
 
-        <button class="close-btn" onclick="closeModal()">×</button>
+        <button
+            class="close-btn"
+            id="closeModal"
+        >
+            ×
+        </button>
 
         <div id="modalBody"></div>
 
     </div>
 
 </div>
+
+
+<!-- TOAST -->
+<div
+    id="toast"
+    class="toast"
+></div>
 
 
 <script src="script.js"></script>
