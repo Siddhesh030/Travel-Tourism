@@ -3,13 +3,22 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 
+# -----------------------------
+# HOME API
+# -----------------------------
+
 @app.route("/api", methods=["GET"])
-def api_home():
+def home():
+
     return jsonify({
-        "status": "success",
+        "success": True,
         "message": "Wanderly Travel API is running"
     })
 
+
+# -----------------------------
+# DESTINATIONS
+# -----------------------------
 
 @app.route("/api/destinations", methods=["GET"])
 def destinations():
@@ -39,16 +48,15 @@ def destinations():
             "name": "Kashmir",
             "country": "India",
             "price": 15999
-        },
-        {
-            "name": "Mumbai",
-            "country": "India",
-            "price": 6999
         }
     ]
 
     return jsonify(data)
 
+
+# -----------------------------
+# PACKAGES
+# -----------------------------
 
 @app.route("/api/packages", methods=["GET"])
 def packages():
@@ -74,57 +82,61 @@ def packages():
     return jsonify(data)
 
 
+# -----------------------------
+# CONTACT
+# -----------------------------
+
 @app.route("/api/contact", methods=["POST"])
 def contact():
 
-    data = request.get_json(silent=True)
+    data = request.get_json(silent=True) or {}
 
-    if not data:
-        return jsonify({
-            "error": "Invalid request"
-        }), 400
-
-    name = data.get("name", "").strip()
-    email = data.get("email", "").strip()
-    destination = data.get("destination", "").strip()
-    message = data.get("message", "").strip()
+    name = str(data.get("name", "")).strip()
+    email = str(data.get("email", "")).strip()
+    destination = str(data.get("destination", "")).strip()
+    message = str(data.get("message", "")).strip()
 
     if not name:
         return jsonify({
+            "success": False,
             "error": "Name is required"
         }), 400
 
     if not email:
         return jsonify({
+            "success": False,
             "error": "Email is required"
         }), 400
 
     if not destination:
         return jsonify({
+            "success": False,
             "error": "Destination is required"
         }), 400
 
     if not message:
         return jsonify({
+            "success": False,
             "error": "Message is required"
         }), 400
 
-    print("================================")
-    print("NEW TRAVEL ENQUIRY")
-    print("================================")
+    print("----- NEW TRAVEL ENQUIRY -----")
     print("Name:", name)
     print("Email:", email)
     print("Destination:", destination)
     print("Message:", message)
-    print("================================")
+    print("------------------------------")
 
     return jsonify({
         "success": True,
-        "message": "Thank you! Your travel enquiry has been received."
+        "message": "Thank you! Your enquiry has been received."
     })
 
 
-# Local development
+# -----------------------------
+# VERCEL ENTRY POINT
+# -----------------------------
+
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
