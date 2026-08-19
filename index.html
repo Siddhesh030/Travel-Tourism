@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wanderly | Explore The World</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="logo">
+        <span>✈</span> Wanderly
+    </div>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#packages">Packages</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+        <button id="themeBtn" class="icon-btn">☾</button>
+        <button id="menuBtn" class="menu-btn">☰</button>
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-small">DISCOVER • EXPLORE • EXPERIENCE</p>
+
+        <h1>
+            Explore The World,
+            <span>One Journey</span> At A Time.
+        </h1>
+
+        <p class="hero-text">
+            Discover beautiful destinations, unforgettable experiences
+            and carefully designed travel packages.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#destinations" class="btn primary-btn">
+                Explore Destinations
+            </a>
+
+            <a href="#packages" class="btn secondary-btn">
+                View Packages
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SEARCH -->
+<section class="search-section">
+
+    <div class="search-box">
+
+        <div class="search-item">
+            <span>📍</span>
+            <div>
+                <small>Destination</small>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Where do you want to go?"
+                >
+            </div>
+        </div>
+
+        <div class="search-item">
+            <span>📅</span>
+            <div>
+                <small>Travel Date</small>
+                <input type="date">
+            </div>
+        </div>
+
+        <div class="search-item">
+            <span>👥</span>
+            <div>
+                <small>Travelers</small>
+                <select>
+                    <option>1 Traveler</option>
+                    <option>2 Travelers</option>
+                    <option>3 Travelers</option>
+                    <option>4+ Travelers</option>
+                </select>
+            </div>
+        </div>
+
+        <button class="search-btn" onclick="searchDestination()">
+            Search
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- DESTINATIONS -->
+<section id="destinations" class="section">
+
+    <div class="section-heading">
+        <p>POPULAR DESTINATIONS</p>
+        <h2>Places That Inspire You</h2>
+        <span>
+            Explore some of the world's most beautiful destinations.
+        </span>
+    </div>
+
+
+    <div class="destination-grid">
+
+        <article class="destination-card">
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80">
+
+            <div class="card-content">
+                <span>🇮🇳 India</span>
+                <h3>Goa</h3>
+                <p>Beaches, sunsets and unforgettable coastal experiences.</p>
+
+                <div class="card-bottom">
+                    <strong>From ₹12,999</strong>
+                    <button class="heart">♡</button>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="destination-card">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=80">
+
+            <div class="card-content">
+                <span>🇮🇳 India</span>
+                <h3>Manali</h3>
+                <p>Mountains, snow and peaceful Himalayan landscapes.</p>
+
+                <div class="card-bottom">
+                    <strong>From ₹15,499</strong>
+                    <button class="heart">♡</button>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="destination-card">
+            <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=900&q=80">
+
+            <div class="card-content">
+                <span>🇮🇳 India</span>
+                <h3>Jaipur</h3>
+                <p>Discover royal palaces, forts and vibrant culture.</p>
+
+                <div class="card-bottom">
+                    <strong>From ₹10,999</strong>
+                    <button class="heart">♡</button>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="destination-card">
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80">
+
+            <div class="card-content">
+                <span>🇮🇳 India</span>
+                <h3>Kerala</h3>
+                <p>Backwaters, greenery and relaxing natural beauty.</p>
+
+                <div class="card-bottom">
+                    <strong>From ₹14,999</strong>
+                    <button class="heart">♡</button>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- WHY US -->
+<section class="why-section">
+
+    <div class="section-heading">
+        <p>WHY WANDERLY</p>
+        <h2>Travel Made Simple</h2>
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature">
+            <div class="feature-icon">🌎</div>
+            <h3>Beautiful Destinations</h3>
+            <p>
+                Discover carefully selected destinations
+                around the world.
+            </p>
+        </div>
+
+
+        <div class="feature">
+            <div class="feature-icon">💰</div>
+            <h3>Best Prices</h3>
+            <p>
+                Get attractive travel packages at affordable prices.
+            </p>
+        </div>
+
+
+        <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <h3>Safe Travel</h3>
+            <p>
+                Travel with confidence through reliable planning.
+            </p>
+        </div>
+
+
+        <div class="feature">
+            <div class="feature-icon">🎧</div>
+            <h3>24/7 Support</h3>
+            <p>
+                Our support team is available whenever you need help.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PACKAGES -->
+<section id="packages" class="section">
+
+    <div class="section-heading">
+        <p>TRAVEL PACKAGES</p>
+        <h2>Choose Your Adventure</h2>
+    </div>
+
+
+    <div class="package-grid">
+
+        <div class="package-card">
+
+            <div class="package-image">
+                <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=80">
+
+                <span class="package-badge">POPULAR</span>
+            </div>
+
+            <div class="package-content">
+
+                <span>5 Days / 4 Nights</span>
+
+                <h3>Goa Beach Escape</h3>
+
+                <p>
+                    Beaches, nightlife, water sports and
+                    beautiful sunsets.
+                </p>
+
+                <div class="package-footer">
+                    <strong>₹18,999</strong>
+                    <button onclick="bookPackage('Goa Beach Escape')">
+                        Book Now
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="package-card">
+
+            <div class="package-image">
+                <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=80">
+            </div>
+
+            <div class="package-content">
+
+                <span>4 Days / 3 Nights</span>
+
+                <h3>Royal Rajasthan</h3>
+
+                <p>
+                    Experience forts, palaces and
+                    traditional Indian culture.
+                </p>
+
+                <div class="package-footer">
+                    <strong>₹16,499</strong>
+                    <button onclick="bookPackage('Royal Rajasthan')">
+                        Book Now
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="package-card">
+
+            <div class="package-image">
+                <img src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=900&q=80">
+            </div>
+
+            <div class="package-content">
+
+                <span>6 Days / 5 Nights</span>
+
+                <h3>Kerala Escape</h3>
+
+                <p>
+                    Relax among backwaters, beaches
+                    and beautiful greenery.
+                </p>
+
+                <div class="package-footer">
+                    <strong>₹21,999</strong>
+                    <button onclick="bookPackage('Kerala Escape')">
+                        Book Now
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery-section">
+
+    <div class="section-heading">
+        <p>TRAVEL GALLERY</p>
+        <h2>Moments Worth Remembering</h2>
+    </div>
+
+
+    <div class="gallery">
+
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80">
+
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80">
+
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80">
+
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80">
+
+        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80">
+
+        <img src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?auto=format&fit=crop&w=900&q=80">
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+<section id="reviews" class="section">
+
+    <div class="section-heading">
+        <p>TRAVELERS LOVE US</p>
+        <h2>What Our Travelers Say</h2>
+    </div>
+
+
+    <div class="reviews">
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "The website made planning my Goa trip
+                very easy. The design is beautiful and simple."
+            </p>
+
+            <strong>Rahul Sharma</strong>
+            <span>Goa Traveler</span>
+        </div>
+
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "I really liked the destination information
+                and travel package section."
+            </p>
+
+            <strong>Priya Patil</strong>
+            <span>Travel Explorer</span>
+        </div>
+
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "A clean and easy-to-use travel website
+                with useful information."
+            </p>
+
+            <strong>Akash More</strong>
+            <span>Adventure Lover</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <p>GET IN TOUCH</p>
+
+            <h2>Plan Your Next Adventure</h2>
+
+            <span>
+                Have a question about a destination or
+                package? Send us a message.
+            </span>
+
+            <div class="contact-details">
+                <div>📧 hello@wanderly.com</div>
+                <div>📞 +91 98765 43210</div>
+                <div>📍 Pune, Maharashtra, India</div>
+            </div>
+
+        </div>
+
+
+        <form id="contactForm" class="contact-form">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <input
+                type="text"
+                id="destination"
+                placeholder="Interested Destination"
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+            ></textarea>
+
+            <button type="submit" class="btn primary-btn">
+                Send Message
+            </button>
+
+            <p id="formMessage"></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-logo">
+        ✈ Wanderly
+    </div>
+
+    <p>
+        Explore more. Travel farther. Create memories.
+    </p>
+
+    <div class="socials">
+        <span>Instagram</span>
+        <span>Facebook</span>
+        <span>Twitter</span>
+    </div>
+
+    <small>
+        © 2026 Wanderly Travel. All Rights Reserved.
+    </small>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
